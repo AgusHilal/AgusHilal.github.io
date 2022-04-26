@@ -1,0 +1,13 @@
+img {
+    border-radius: 50%;
+     display: block;
+     margin-left: auto;
+      margin-right: auto;
+ }
+.content{
+      max-width: 500px;
+     margin: auto;
+  }
+p {
+    color: black;background-color: white;
+}
