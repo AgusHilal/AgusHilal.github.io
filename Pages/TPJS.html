@@ -38,6 +38,23 @@
     <label for="ej3_r1">Resultado</label>
     <input type="text" id="ej3_r1">
 
+    <h5>EJERCICIO 6</h5>
+
+    <label for="ej6_n1">Número</label>
+    <input type="number" id="ej6_n1">
+    <label for="ej6_t1">Resultado</label>
+    <input type="text" id="ej6_t1">
+    <button onclick="func_ej6()">calcular</button>
+
+    <h5>EJERCICIO 7</h5>
+
+    <label for= "ej7_n1">num 1</label>
+    <input type="number" id="ej7_n1">
+    <label for= "ej7_n2">num 2</label>
+    <input type="number" id="ej7_n2">
+    <button onclick="func_ej7()">calcular</button>
+    <label for= "ej7_r1">multiplos</label>
+    <input type="text" id="ej7_r1">
 
 
     <script>
@@ -77,6 +94,46 @@
             } 
             document.getElementById('ej3_r1').value = frase
         }
+
+        function func_ej6() {  
+        let num = parseFloat(document.getElementById('ej6_n1').value);
+        calc = num % 2
+        if (calc == 0) {
+            var res = "par";
+            document.getElementById("ej6_t1").value = res;
+        }else{
+            var res = "impar";
+            document.getElementById("ej6_t1").value = res;
+        }
+        }
+        function func_ej7(){
+
+            let num1= parseInt(document.getElementById('ej7_n1').value);
+            let num2= parseInt(document.getElementById('ej7_n2').value);
+
+            let multiplos = ""
+            let comparten = true
+            let mult = 3
+            var mod1, mod2
+
+            while (mult <= num1 && mult <= num2) {
+
+            mod1 = num1 % mult
+            mod2 = num2 % mult
+            if (mod1 === mod2){
+
+                multiplos = multiplos + mult + ", "
+                mult = mult + 3
+
+            } else {
+                comparten = false 
+            } 
+
+            document.getElementById("ej7_r1").value= multiplos
+            }
+
+        }
     </script>
 </body>
+
 </html>
