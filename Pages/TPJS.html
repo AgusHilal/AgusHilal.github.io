@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <H5>EJERCICIO 1</H5>
+    <label for="ej1_n1">Número 1</label>
+    <input type="number" id="ej1_n1">
+    <label for="ej1_n2">Número 2</label>
+    <input type="number" id="ej1_n2">
+    <label for="ej1_n3">Número 3</label>
+    <input type="number" id="ej1_n3">
+    <button onclick="func_ej1()">Comparar</button>
+    <label for="ej1_r1">Resultado</label>
+    <input type="text" id="ej1_r1">
+    
+
+    <h5>EJERCICIO 2</h5>
+    <label for="ej2_n1">Número 1</label>
+    <input type="number" id="ej2_n1">
+    <label for="ej2_n2">Número 2</label>
+    <input type="number" id="ej2_n2">
+    <button onclick="func_ej2()">Sumar</button>
+    <label for="ej2_r1">Resultado</label>
+    <input type="number" id="ej2_r1">
+
+
+    <H5>EJERCICIO 3</H5>
+    <label for="ej3_t1">Palabra</label>
+    <input type="text" id="ej3_t1">
+    <label for="ej3_n1">Número de veces que desea repetir</label>
+    <input type="number" id="ej3_n1">
+    <button onclick="func_ej3()">Repetir</button>
+    <label for="ej3_r1">Resultado</label>
+    <input type="text" id="ej3_r1">
+
+
+
+    <script>
+        //función ejercicio 1
+        function func_ej1(){
+            let ej1_n1 = parseFloat (document.getElementById('ej1_n1').value);
+            let ej1_n2 = parseFloat (document.getElementById('ej1_n2').value);
+            let ej1_n3 = parseFloat (document.getElementById('ej1_n3').value);
+            //const suma = ej1_n1 + ej2_n2 + ej3_n3
+            if (ej1_n1>ej1_n2 && ej1_n1>ej1_n3) {
+                    var suma = ej1_n1
+                } else {
+                 if (ej1_n2>ej1_n1 && ej1_n2>ej1_n3) {
+                        var suma = ej1_n2
+                    } else { var suma = ej1_n3
+                    
+                    }
+                }
+
+                document.getElementById('ej1_r1').value = suma
+        }
+
+        function func_ej2(){
+            let ej2_n1 = parseFloat (document.getElementById('ej2_n1').value); 
+            let ej2_n2 = parseFloat (document.getElementById('ej2_n2').value);
+            const suma=ej2_n1 + ej2_n2
+            document.getElementById('ej2_r1').value = suma
+        }
+
+        function func_ej3(){
+            let ej3_t1 = (document.getElementById('ej3_t1').value);
+            let ej3_n1 = parseFloat (document.getElementById('ej3_n1').value);
+            let frase = ""
+            for (let index = 0; index < ej3_n1; index++) {
+               frase = frase + ej3_t1
+                
+            } 
+            document.getElementById('ej3_r1').value = frase
+        }
+    </script>
+</body>
+</html>
