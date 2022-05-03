@@ -39,5 +39,6 @@
           <a href="https://www.youtube.com/channel/UCpK1EkZXjWFOMaz0TG7U1HA" class="btn btn-primary">Go to youtube</a>
         </div>
       </div>
+      <a target="_blank" href="./Pages/TPJS.html">Link a ejercicios de JS</a>
 </body>
 </html>
