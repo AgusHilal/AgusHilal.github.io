@@ -1,0 +1,125 @@
+function sumar (a, b) {
+    
+}
+//función ejercicio 1
+function func_ej1(){
+    let ej1_n1 = parseFloat (document.getElementById('ej1_n1').value);
+    let ej1_n2 = parseFloat (document.getElementById('ej1_n2').value);
+    let ej1_n3 = parseFloat (document.getElementById('ej1_n3').value);
+    //const suma = ej1_n1 + ej2_n2 + ej3_n3
+    if (ej1_n1>ej1_n2 && ej1_n1>ej1_n3) {
+            var suma = ej1_n1
+        } else {
+         if (ej1_n2>ej1_n1 && ej1_n2>ej1_n3) {
+                var suma = ej1_n2
+            } else { var suma = ej1_n3
+            
+            }
+        }
+
+        document.getElementById('ej1_r1').value = suma
+}
+
+function func_ej2(){
+    let ej2_n1 = parseFloat (document.getElementById('ej2_n1').value); 
+    let ej2_n2 = parseFloat (document.getElementById('ej2_n2').value);
+    const suma=ej2_n1 + ej2_n2
+    document.getElementById('ej2_r1').value = suma
+}
+        
+function func_ej3(){
+    let ej3_t1 = (document.getElementById('ej3_t1').value);
+    let ej3_n1 = parseFloat (document.getElementById('ej3_n1').value);
+    let frase = ""
+    for (let index = 0; index < ej3_n1; index++) {
+       frase = frase + ej3_t1
+        
+    } 
+    document.getElementById('ej3_r1').value = frase
+}
+function func_ej4() {
+    let ej4_n1 = parseFloat (document.getElementById('ej4_n1').value);
+    let ej4_n2 = parseFloat (document.getElementById('ej4_n2').value);
+    alert (ej4_n1)
+    if (ej4_n1 == 0 && ej4_n2!=0) {
+       const celsius = ((ej4_n2 - 32) * (5/9)) 
+
+         document.getElementById('ej4_n2').value = 0
+        document.getElementById('ej4_n1').value = celsius
+    } else {
+        const farentheit = ((ej4_n1 * (9/5)) +32)
+        alert ("El else funciona")
+        document.getElementById('ej4_n2').value = farentheit
+        document.getElementById('ej4_n1').value = 0
+    }
+    
+}
+
+function func_ej6() {  
+    let num = parseFloat(document.getElementById('ej6_n1').value);
+    calc = num % 2
+    if (calc == 0) {
+        var res = "par";
+        document.getElementById("ej6_t1").value = res;
+    }else{
+        var res = "impar";
+        document.getElementById("ej6_t1").value = res;
+    }
+}
+
+function func_ej7(){
+
+    let num1= parseInt(document.getElementById('ej7_n1').value);
+    let num2= parseInt(document.getElementById('ej7_n2').value);
+
+    let multiplos = ""
+    let comparten = true
+    let mult = 3
+    var mod1, mod2
+
+    while (mult >= num1 && mult <= num2) {
+
+    mod1 = num1 % mult
+    mod2 = num2 % mult
+    if (mod1 === mod2){
+
+        multiplos = multiplos + mult + ", "
+        mult = mult + 3
+
+    } else {
+        comparten = false 
+    } 
+
+    }
+    document.getElementById("ej7_r1").value= multiplos
+    console.log (multiplos)
+}
+
+function func_ej8(){
+
+    let num1= parseInt(document.getElementById('ej8_n1').value);
+
+
+var primos = []
+for (let index = 0; index <= num1; index++) {
+
+if (esPrimo(index)) {
+    primos.push(index)
+}
+    
+}
+alert (primos.toString())
+}
+
+function esPrimo(numero) {
+
+    for (var i = 2; i < numero; i++) {
+  
+      if (numero % i === 0) {
+        return false;
+      }
+  
+    }
+  
+    return numero !== 1;
+  }
