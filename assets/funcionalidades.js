@@ -55,6 +55,12 @@ function func_ej4() {
     
 }
 
+function func_ej5() {
+    const palabra = document.getElementById("ejercicio5Palabra").value;
+    const resultado = document.getElementById("ejercicio5Resultado");
+    resultado.textContent = "La palabra " + palabra + " tiene " + palabra.length + " letras"
+}
+
 function func_ej6() {  
     let num = parseFloat(document.getElementById('ej6_n1').value);
     calc = num % 2
@@ -123,3 +129,29 @@ function esPrimo(numero) {
   
     return numero !== 1;
   }
+function func_ej9(){
+
+    const nombre = document.getElementById("ejercicio9Nombre").value;
+  const apellido = document.getElementById("ejercicio9Apellido").value;
+  const edad = parseInt(document.getElementById("ejercicio9Edad").value);
+  const ciudad = document.getElementById("ejercicio9Ciudad").value;
+  const resultado = document.getElementById("ejercicio9Resultado");
+
+  resultado.textContent = "Mi nombre es " + nombre + " " + apellido + " , tengo " + edad + " años. Nací en la ciudad de " + ciudad;
+}
+
+function func_ej10(){
+    const num1 = parseInt(document.getElementById("ejercicio10Num1").value);
+    const num2 = parseInt(document.getElementById("ejercicio10Num2").value);
+    const resultado = document.getElementById("ejercicio10Resultado");
+  
+    if(num1 < num2){
+      for(let i=num1+1; i < num2; i++){
+          resultado.textContent = resultado.innerHTML + " | " + i;
+        }
+    }else{
+      for(let i=num1+1; i < num1; i++){
+        resultado.textContent = resultado.innerHTML + " | " + i;
+      }
+    }
+}
